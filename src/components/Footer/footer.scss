@@ -1,0 +1,13 @@
+@import '../../common/colors.scss';
+/* almost as Header for consistency */
+.footer {
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem auto 1.2rem auto;
+    height: 5rem;
+    min-width: auto;
+
+}

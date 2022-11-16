@@ -1,0 +1,24 @@
+/* we need color variables in colors.scss */
+@import '../../common/colors.scss';
+
+.header {
+    background-color: $dark;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 1.2rem auto;
+     height: 5rem;
+    min-width: auto;
+
+}
+.logo{
+    color: $font-primary;
+    font-size:x-large;
+    font-weight: 600;
+    letter-spacing: 0.6rem;
+}
+.user_image img {
+    height: 3.2rem;
+    width: auto;
+    border-radius:20% ;
+}

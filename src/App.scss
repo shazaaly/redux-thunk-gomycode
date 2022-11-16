@@ -1,0 +1,24 @@
+//Basic Styling //
+@import './common/colors.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: $primary-color;
+    color: $font-primary;
+    overflow: hidden;
+}
+
+.container { 
+    margin: 0 5rem;
+    height: 70vh;
+}
