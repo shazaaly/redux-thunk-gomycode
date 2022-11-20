@@ -1,13 +1,17 @@
 @import '../../common/colors.scss';
 /* almost as Header for consistency */
 .footer {
+    font-size: 14px;
+    font-weight: 300;
     background-color: $dark;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1.2rem auto 1.2rem auto;
-    height: 5rem;
-    min-width: auto;
+    // margin: 1.2rem auto 1.2rem auto;
+    height: 3rem;
+    min-width: 100%;
+    position: fixed;
+    bottom: 0;
 
 }

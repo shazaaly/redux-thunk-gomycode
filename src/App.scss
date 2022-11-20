@@ -15,10 +15,11 @@ a{
 body{
     background-color: $primary-color;
     color: $font-primary;
-    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 .container { 
     margin: 0 5rem;
-    height: 70vh;
+    height: 80vh;
 }

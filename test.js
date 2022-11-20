@@ -35,3 +35,6 @@ const getAverage = (arr) => {
 
 console.log(getAverage(dolphins));
 console.log(getAverage(fishes));
+
+// let name = 'Shaza'
+// console.log(name.indexOf('S'));
