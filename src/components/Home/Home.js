@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 import { MovieListing } from "../MovieListing/MovieListing";
-import { asyncFetchMovies } from '../../Features/Movies/MoviesSlice';
-import { MovieApiKey } from "../../common/apis/MovieApiKey";
-import movieApi from "../../common/apis/movieApi";
-import { useDispatch, useSelector } from 'react-redux';
-import { moviesActions } from '../../Features/Movies/MoviesSlice';
+import { asyncFectchSeries, asyncFetchMovies } from '../../Features/Movies/MoviesSlice';
+import { useDispatch } from 'react-redux';
 const Home = () => {
     const dispatch = useDispatch()
     useEffect(() => {
        dispatch(asyncFetchMovies())
+       dispatch(asyncFectchSeries())
+    
+    
 
     }, [dispatch]);
-
 
     return (
         <div className='banner'>

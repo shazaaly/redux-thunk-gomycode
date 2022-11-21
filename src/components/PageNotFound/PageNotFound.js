@@ -2,6 +2,6 @@ import React from 'react'
 
 export const PageNotFound = () => {
   return (
-    <div>PageNotFound</div>
+    <div className='fourofour'>PageNotFound</div>
   )
 }
