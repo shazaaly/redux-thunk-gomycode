@@ -7,18 +7,22 @@ export const MovieCard = (props) => {
   
 
   const { data } = props
+
+  console.log(`${ImagePathLink}${data.poster_path}`);
   // console.log(props.data);
   return (
     <div className='card-item'>
     
       <div className='card-inner'>
         <div className='top'>
-          <img src={`${ImagePathLink}/${data.poster_path}`} alt={data.title} />
+       { data.poster_path? 
+          <img src={`${ImagePathLink}/${data.poster_path}`} alt={data.title} /> : null
+          }
 
         </div>
         <div className='bottom'>
           <div className='info'>
-            <h4>
+            <h4 id='movie-name'>
 
               {data.title ? data.title : data.name}</h4>
             <p>{data.release_date ? data.release_date : data.first_air_date}</p>

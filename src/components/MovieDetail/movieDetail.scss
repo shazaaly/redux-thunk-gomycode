@@ -52,6 +52,9 @@ td, th{
     color: $font-secondary;
 
 }
+.tableBody{
+    margin-top: 0.2rem;
+}
 .data{
     margin-left: 4rem;
     display: flex;
@@ -60,7 +63,9 @@ td, th{
 }
  a{
     text-decoration: none;
-    color: $extra-color;
+    color: #f18593;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    // color: $extra-color;
 }
 
 

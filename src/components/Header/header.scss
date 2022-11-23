@@ -8,13 +8,45 @@
     align-items: center;
     margin: 0 auto 1.2rem auto;
     height: 4rem;
-    min-width: 100%;
+    min-width: 500px;
+    width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
     opacity: 0.9;
+    flex-wrap: wrap;
 
 }
+
+.search-bar{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    button{
+        padding:  0px 8px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 20px;
+
+    }
+}
+ form > input[type=text]{
+    width: 70%;
+    padding:.4rem ;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+
+    min-width: 10rem;
+ }
+
 
 .logo {
     color: $font-primary;

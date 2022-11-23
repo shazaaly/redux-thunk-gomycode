@@ -6,7 +6,7 @@ import { asyncFetchMovieDetails } from '../../Features/Movies/MoviesSlice'
 import { getSelected } from '../../Features/Movies/MoviesSlice'
 import { ImagePathLink } from '../../common/apis/imagesPath'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendar, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar, faStar, faVoteYea } from '@fortawesome/free-solid-svg-icons'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -29,6 +29,7 @@ export const MovieDetail = () => {
         /*check payload return first */
         details.payload ?
           (
+            
 
             <div className='moviedetailMain'>
 
@@ -38,19 +39,24 @@ export const MovieDetail = () => {
 
                 </div>
                 <div className='metaData'>
-                <FontAwesomeIcon icon= {faCalendar}color='#A8DADC' style={ {marginRight:' 0.2rem'}} />
+                  <FontAwesomeIcon icon={faCalendar} color='#A8DADC' style={{ marginRight: ' 0.2rem' }} />
 
                   <span className='meta span1'>
 
-                    {details.payload.release_date}
+                  Released: {details.payload.release_date}
                   </span>
                   <span className='meta span2'>
-                    <FontAwesomeIcon icon={faStar} color='4d4d4e' style={ {marginRight:' 0.2rem'}} />
-                    {details.payload.vote_average}</span>
+                    <FontAwesomeIcon icon={faStar} color='#DF8D3A' style={{ marginRight: ' 0.2rem' }} />
+                    Rating: {details.payload.vote_average}</span>
                   <span className='meta span3'>
-                  <FontAwesomeIcon icon={faFilm }  color='4d4d4e' style={ {marginRight:' 0.2rem'}}/>
-                   {details.payload.runtime} min
-                   </span>
+                    <FontAwesomeIcon icon={faFilm} color='4d4d4e' style={{ marginRight: ' 0.2rem' }} />
+                   Run time: {details.payload.runtime} min
+                  </span>
+
+                  <span className='meta span4'>
+                    <FontAwesomeIcon icon={faVoteYea} color='#F1FAD6' style={{ marginRight: ' 0.2rem' }} />
+                   Votes:  {details.payload.vote_count} 
+                  </span>
 
                 </div>
 
@@ -89,7 +95,7 @@ export const MovieDetail = () => {
                           {
                             details.payload.genres.map((item) => {
                               {/* {console.log(item.name)} */ }
-                              return (<span >{item.name}</span>)
+                              return (<span style={ {marginRight : '1rem'}}>{item.name}</span>)
                             })
                           }
                         </td>
@@ -106,7 +112,7 @@ export const MovieDetail = () => {
               </div>
 
             </div>
-          ) : `error`
+          ) : <div>Loading ...</div>
       }
 
 

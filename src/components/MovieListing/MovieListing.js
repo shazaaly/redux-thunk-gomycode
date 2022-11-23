@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MovieCard } from '../MovieCard/MovieCard'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import '../MovieListing/movieListing.scss'
 import { Link } from 'react-router-dom';
-
+import Slider from "react-slick";
+import { settings } from '../../common/settings';
 
 export const MovieListing = () => {
+   
   let movies = useSelector(state => state.movies.movies)
   let series = useSelector(state => state.movies.series)
   // console.log(series.payload);
@@ -29,7 +31,7 @@ export const MovieListing = () => {
   // Series:
   let renderSeries = ''
   try {
-    renderSeries = series ?
+    renderSeries = series ? 
       series.payload.map((show) =>
 
         <Link to={`/movies/${show.id}`}>
@@ -52,7 +54,7 @@ export const MovieListing = () => {
         <div className='movie-list'>
           <h2>Movies</h2>
           <div className='movie-container'>
-            {renderMovies}
+            <Slider {...settings}>{renderMovies}</Slider>
           </div>
 
         </div>
@@ -60,7 +62,7 @@ export const MovieListing = () => {
         <div className='series-list'>
           <h2>Series</h2>
           <div className='series-container'>
-            {renderSeries}
+          <Slider {...settings}> {renderSeries}</Slider>
           </div>
 
         </div>
