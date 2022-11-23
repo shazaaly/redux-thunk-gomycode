@@ -31,7 +31,7 @@ export const Header = () => {
 
                 <div className='search-bar'>
                     <form onSubmit={submitHandler}>
-                        <input type='text' value={text} onChange={(e) => { setText(e.target.value) }} placeholder='search movies or series' />
+                        <input type='text' value={text} onChange={(e) => { setText(e.target.value) }} placeholder='search..' />
                         <button type='submit'><FontAwesomeIcon icon={faSearch} /></button>
                     </form>
 
